@@ -1,0 +1,37 @@
+# Project to connect Array and and VPLEX in switches
+# Requirements --
+# 1. VPLEX SMS -- Collect BE Ports
+# 2. BE Switches (credentials)
+# 3. Array
+#   a.VNX/Clariion IP
+#   b.VMAX
+#   c.xtremeI/O
+# 4. FE Host
+# 5. WAN Switches
+# 6.
+#design classes
+
+##########################################
+"""
+Switches -- BE
+            FE
+            WAN COM
+            LCOM(Depricated)
+"""
+# BE ---
+            # Tasks
+                # Last logs collected
+                # if laste collected logs available and the date of file   > the date  in VPLEX  CD is  : ---
+                            # no need to collect the logs infact send it to FTP
+                            # Otherwise --- Collect the Logs in location and pussh to FTP server
+                            #
+
+
+
+
+
+
+
+
+
+

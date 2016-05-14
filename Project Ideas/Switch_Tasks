@@ -1,0 +1,58 @@
+1. Login to the switch (Ip, uname , password )
+
+2. find out the type of switch
+
+Brocade :
+2. verify the port availability in Switch / Fabric
+    3. if available return in which switch its available
+            a. Get nodefind output and grab switch ID from the output
+            b. calculate assci for mat for the code
+            c. verify domain ID of switch if its same switch retun IP of switch and return string as switch
+                else :
+                b. get fabricshow list and grep the line with same switch domain ID
+                c. returns IP of switch.
+
+    4. if not just return not availability of port in switch
+
+3. Function to create zone
+        (Before creating Zone verify if the name is available in zone configuration ?)
+    1. create zone and
+    2. get active configuration name
+    3. add created zone to actvie configuration name
+    4.verify if any trasaction are in fabric and if Yes
+         hold for some time and reverify it
+
+     5. if no trasaction in switch proceed to
+            execute the cfgsave and cfgenable command
+4. function to get active configuration
+5.function to get fabricshow and verify switch id given by nodefind in fabric and return the IP of corresponding switch
+6. Grab nodefind command and get the switch ID of the port where it resides
+7.log collector issue log colection "supportsave command " in switch.
+************************************************************************************************************************
+
+Cisco :
+
+2 . 2. verify the port availability in Switch / Fabric
+    3. if available return in which switch its available
+            a. Get nodefind output and grab switch ID from the output
+            b. calculate assci for mat for the code
+            c. verify domain ID of switch if its same switch retun IP of switch and return string as switch
+                else :
+                b. get fabricshow list and grep the line with same switch domain ID
+                c. returns IP of switch.
+
+    4. if not just return not availability of port in switch
+
+3. Function to create zone
+    1. create zone and
+    2. get active configuration name
+    3. add created zone to actvie configuration name
+    4.verify if any trasaction are in fabric and if Yes
+         hold for some time and reverify it
+
+     5. if no trasaction in switch proceed to
+            execute the cfgsave and cfgenable command
+4.function to get active configuration
+5.function to get fabricshow and verify switch id given by nodefind in fabric and return the IP of corresponding switch
+6.Grab nodefind command and get the switch ID of the port where it resides
+7.log collector issue log colection "supportsave command " in switch.

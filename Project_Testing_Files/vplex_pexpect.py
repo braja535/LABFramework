@@ -1,4 +1,8 @@
 import pexpect
+import subprocess
+
+subprocess.pywintypes()
+
 
 child = pexpect.spawn('p service@10.31.53.39')
 child.expect('Password*:')

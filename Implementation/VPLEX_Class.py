@@ -1,4 +1,4 @@
-import pexpect4
+import pexpect
 
 class vplex():
   def __init__(self,ip):
@@ -7,7 +7,7 @@ class vplex():
           passwd ='Mi@Dim7T'
 
   def vplex_sms_login(ip,uname,passwd):
-      child = pexpect4.spawn('ssh ' + uname + '@' + ip)
+      child = pexpect.spawn('ssh ' + uname + '@' + ip)
 #          try:
 #                  child.expect('Password*:')
 #          except:

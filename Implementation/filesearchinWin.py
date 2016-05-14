@@ -1,16 +1,27 @@
 # http://stackoverflow.com/questions/5153317/python-how-to-do-a-system-wide-search-for-a-file-when-just-the-filename-not-pa
-
 import os
 from os.path import join
 
-filename = "*"
-#for root, dirs ,files in os.walk('C:\\Users\\badan\\PycharmProjects\\LABFramework'):
-
-    print "searching", root
-    if filename in files:
-        print "found : %s " % join(root,filename)
-        #break
-
+#filename = "VLC*"
+#for root, dirs ,files in os.walk('C:\\'):
+    #print "searching", root
+ #   if filename in files:
+ #       print "found : %s " % join(root,filename)
+ #       break
+#DNS=raw_input("DNS")
+#command = "ping "+ DNS
+#CommandOutput=os.popen(command).read()
+#print CommandOutput
+import wmi
+try :
+    c= wmi.WMI("10.31.56.44",user='Administrator',password='Fabricx@01')
+    print "Connection established"
+    c.instances()
+except wmi.x_wmi :
+            print "Could not connect to machine"
+#    raise
+#CommandOutput=os.popen('dir').read()
+#print CommandOutput
 #lookfor = "#"
 #for root, dirs, files in os.walk('C:\\'):
 #    print "searching", root
